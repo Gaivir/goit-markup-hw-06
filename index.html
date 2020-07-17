@@ -64,8 +64,63 @@
         <div class="hero-section">
           <h1 class="hero-title">эффективные решения для вашего бизнеса</h1>
           <div class="hero-button">
-            <a href="" class="button">Заказать услугу</a>
+            <a href="" class="button data-open-modal">Заказать услугу</a>
           </div>
+        </div>
+
+        <!-- Form -->
+        <div class="backdrop is-hidden data-backdrop">
+          <form class="form js-speaker-form" autocomplete="off">
+            <button class="cloth">
+              <svg class="icon-clothe">
+                <use href="./images/form/Vector.svg"></use>
+              </svg>
+            </button>
+            <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Имя"
+                id="name"
+                autofocus
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Телефон</label>
+              <input type="tel" name="phone" placeholder="Телефон" id="phone" />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Почта</label>
+              <input type="email" name="mail" id="email" placeholder="Почта" />
+            </div>
+
+            <div class="form-field">
+              <label for="coment">Коментарий</label>
+              <textarea
+                name="coment"
+                rows="6"
+                id="coment"
+                placeholder="Коментарий"
+                class="comment"
+              ></textarea>
+            </div>
+
+            <div clas="checkbox">
+              <input type="checkbox" name="policy" value="policy" id="policy" />
+
+              <label class="policy checkbox-text" for="policy"
+                >Соглашаюсь с рассылкой и принимаю</label
+              >
+              <a href="" class="policy contract-link">Условия договора</a>
+            </div>
+
+            <button class="form-button" type="submit">Отправить</button>
+          </form>
         </div>
       </section>
 
@@ -386,5 +441,26 @@
 
       <!-- <p class="contacts-down">2020 | Developed by GoIT Students</p> -->
     </footer>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
