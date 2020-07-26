@@ -92,11 +92,12 @@
               </svg>
             </div> -->
 
-            <label for="name" class="form-field">
+            <label class="form-field">
               <input
                 type="text"
                 name="name"
                 placeholder=" "
+                required
                 class="form-input"
               />
               <span class="form-lable">Имя</span>
@@ -106,11 +107,12 @@
               </svg>
             </label>
 
-            <label for="name" class="form-field">
+            <label class="form-field">
               <input
                 type="tel"
                 name="phone"
                 placeholder=" "
+                required
                 class="form-input"
               />
               <span class="form-lable">Телефон</span>
@@ -120,11 +122,12 @@
               </svg>
             </label>
 
-            <label for="name" class="form-field">
+            <label class="form-field">
               <input
                 type="email"
                 name="email"
                 placeholder=" "
+                required
                 class="form-input"
               />
               <span class="form-lable">Почта</span>
@@ -152,14 +155,18 @@
               <label for="coment" class="lable-comment">Коментарий</label>
             </div>
 
-            <div clas="checkbox">
-              <input type="checkbox" name="policy" value="policy" id="policy" />
-
-              <label class="policy checkbox-text" for="policy"
-                >Соглашаюсь с рассылкой и принимаю</label
-              >
-              <a href="" class="policy contract-link">Условия договора</a>
-            </div>
+            <label class="checkbox-lable">
+              <input
+                type="checkbox"
+                name="policy"
+                value="policy"
+                id="policy"
+                class="checkbox-input"
+              />
+              <span class="checkbox-icon"> </span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="contract-link">Условия договора</a></label
+            >
 
             <button class="form-button" type="submit">Отправить</button>
           </form>
@@ -213,24 +220,20 @@
         <div class="section-box">
           <h2 class="primery-text-title">Чем мы занимаемся</h2>
           <ul class="list-style works-block">
-            <div class="work-box">
-              <li>
-                <img src="images/works/box_1.jpg" alt="desktop applications" />
-                <h3 class="works-title">Десктопные приложения</h3>
-              </li>
-            </div>
-            <div class="work-box">
-              <li>
-                <img src="images/works/box_2.jpg" alt="mobile applications" />
-                <h3 class="works-title">Мобильные приложения</h3>
-              </li>
-            </div>
-            <div class="work-box">
-              <li>
-                <img src="images/works/box_3.jpg" alt="design solutions" />
-                <h3 class="works-title">Дизайнерские решения</h3>
-              </li>
-            </div>
+            <li class="work-box">
+              <img src="images/works/box_1.jpg" alt="desktop applications" />
+              <h3 class="works-title">Десктопные приложения</h3>
+            </li>
+
+            <li class="work-box">
+              <img src="images/works/box_2.jpg" alt="mobile applications" />
+              <h3 class="works-title">Мобильные приложения</h3>
+            </li>
+
+            <li class="work-box">
+              <img src="images/works/box_3.jpg" alt="design solutions" />
+              <h3 class="works-title">Дизайнерские решения</h3>
+            </li>
           </ul>
         </div>
       </section>
