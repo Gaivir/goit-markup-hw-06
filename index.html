@@ -71,43 +71,85 @@
         <!-- Form -->
         <div class="backdrop is-hidden data-backdrop">
           <form class="form js-speaker-form" autocomplete="off">
-            <button class="cloth">
+            <button class="close data-close-modal">
               <svg class="icon-clothe">
-                <use href="./images/form/Vector.svg"></use>
+                <use href="./images/symbol-defs2.svg#icon-close"></use>
               </svg>
             </button>
             <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
 
-            <div class="form-field">
-              <label for="name">Имя</label>
+            <!-- <div class="form-field">
               <input
                 type="text"
                 name="name"
-                placeholder="Имя"
                 id="name"
-                autofocus
+                placeholder=" "
+                class="form-input"
               />
-            </div>
+              <label for="name" class="form-lable">Имя</label>
+              <svg class="form-icon">
+                <use href="./images/symbol-defs2.svg#icon-person"></use>
+              </svg>
+            </div> -->
+
+            <label for="name" class="form-field">
+              <input
+                type="text"
+                name="name"
+                placeholder=" "
+                class="form-input"
+              />
+              <span class="form-lable">Имя</span>
+
+              <svg class="form-icon">
+                <use href="./images/symbol-defs2.svg#icon-person"></use>
+              </svg>
+            </label>
+
+            <label for="name" class="form-field">
+              <input
+                type="tel"
+                name="phone"
+                placeholder=" "
+                class="form-input"
+              />
+              <span class="form-lable">Телефон</span>
+
+              <svg class="form-icon">
+                <use href="./images/symbol-defs2.svg#icon-phone"></use>
+              </svg>
+            </label>
+
+            <label for="name" class="form-field">
+              <input
+                type="email"
+                name="email"
+                placeholder=" "
+                class="form-input"
+              />
+              <span class="form-lable">Почта</span>
+
+              <svg class="form-icon">
+                <use href="./images/symbol-defs2.svg#icon-letter"></use>
+              </svg>
+            </label>
 
             <div class="form-field">
-              <label for="phone">Телефон</label>
-              <input type="tel" name="phone" placeholder="Телефон" id="phone" />
-            </div>
-
-            <div class="form-field">
-              <label for="email">Почта</label>
-              <input type="email" name="mail" id="email" placeholder="Почта" />
-            </div>
-
-            <div class="form-field">
-              <label for="coment">Коментарий</label>
               <textarea
                 name="coment"
                 rows="6"
                 id="coment"
-                placeholder="Коментарий"
-                class="comment"
+                placeholder=" "
+                class="comment form-input"
               ></textarea>
+              <!-- <input
+                type="text"
+                name="comment"
+                id="comment"
+                placeholder=" "
+                class="form-input comment"
+              /> -->
+              <label for="coment" class="lable-comment">Коментарий</label>
             </div>
 
             <div clas="checkbox">
@@ -428,13 +470,14 @@
           <h3 class="footer-title">Подпишитесь на рассылку</h3>
           <div class="form-inner">
             <input
-              type="text"
-              placeholder="E-mail"
+              type="email"
               name="email"
+              id="email"
+              placeholder="E-mail"
               required
               class="subscription footer-block"
             />
-            <a href="" class="button-footer">Подписаться</a>
+            <button class="button-footer">Подписаться</button>
           </div>
         </form>
       </div>
@@ -442,25 +485,6 @@
       <!-- <p class="contacts-down">2020 | Developed by GoIT Students</p> -->
     </footer>
 
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector("[data-open-modal]"),
-        closeModalBtn: document.querySelector("[data-close-modal]"),
-        backdrop: document.querySelector("[data-backdrop]"),
-      };
-
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      refs.backdrop.addEventListener("click", logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
-
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
